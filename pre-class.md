@@ -13,7 +13,7 @@
 🎯 **Goal:** get the design vocabulary before the code, so every plotting choice in class has a reason
 behind it.
 
-🎬 Watch this video: [[The Architecture of Insight — Data Visualisation & Storytelling]](https://www.youtube.com/watch?v=-SaBG0sEtRA)
+🎬 Watch this video: [[L1.10 The 20 Second Window  Hacking Human Perception with Data]](https://youtu.be/YWIlp4dG8FY)
 
 ---
 
