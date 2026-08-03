@@ -23,11 +23,11 @@
 | 2:35 – 3:00 | Part 4 | Chart choice, the owner's slide, and the 3-act script |
 
 **The notebook follows the four learning outcomes in order.** Principles come before syntax on
-purpose: once learners can say *why* a chart is bad, the matplotlib API stops feeling arbitrary.
+purpose: once you can say *why* a chart is bad, the matplotlib API stops feeling arbitrary.
 
 ---
 
-## 🎬 The hook (do not skip this)
+## 🎬 Why this matters — the same finding, three ways
 
 Three cells, in this order:
 
@@ -36,7 +36,7 @@ Three cells, in this order:
 3. The **built** chart — Marina Bay red, Holland Village green, the other three grey, the competitor
    date annotated, and the finding as the title.
 
-Then ask the room: *which one makes the owner do something?* Nothing about the data changed between
+Then ask yourself: *which one makes the owner do something?* Nothing about the data changed between
 them. Four things about the drawing did, and they are the four things this whole lesson teaches:
 
 - one sentence as the title,
@@ -54,35 +54,32 @@ them. Four things about the drawing did, and they are the four things this whole
 
 > **The chart is chosen by the message, not by taste.**
 
-Make learners write the sentence before they write the code. Every failure in Part 1 comes from doing
-it the other way round.
+Write the sentence before you write the code. Every failure in Part 1 comes from doing it the other
+way round.
 
-### Instructor notes
+### The cells worth slowing down on
 
-- **Part 1 is where the learning is; Parts 2–3 are the tools.** If you fall behind, cut drills from
-  Part 3 (violin, regplot), never the five-move fix in 1.3.
-- **The truncated-axis pair in 1.2 is the single most important cell in the lesson.** Same four
-  numbers, two titles: *"Marina Bay has collapsed to nothing!"* and *"Marina Bay earns about two-thirds of
-  what Raffles Place does"*. Ask which one they have seen in a real meeting. Then give the rule and its reason:
-  **bars encode length, so they start at zero; lines encode position and are read for change, so
-  they may be truncated.**
-- **Let them time themselves on the pie chart.** "Which is the second-biggest daypart for Tampines
-  Mall?" — pie versus bar, out loud. Do not ban pie charts; explain when angle-judging fails.
-- **The five-move fix (1.3) is the assessable skill.** Bad chart → fix one thing at a time → name the
-  pillar each move serves. The class should be able to do this on any chart afterwards.
-- **In Part 2, insist on `fig, ax = plt.subplots()`** from the very first chart. Learners who start
-  with `plt.plot()` spend the rest of the course confused about which chart they are modifying.
+- **Part 1 is where the learning is; Parts 2–3 are the tools.** If you only remember one thing from
+  today, make it the five-move fix in 1.3.
+- **The truncated-axis pair in 1.2.** Same four numbers, two titles: *"Marina Bay has collapsed to
+  nothing!"* and *"Marina Bay earns about two-thirds of what Raffles Place does"*. Ask yourself which
+  one you have seen in a real meeting. Then the rule and its reason: **bars encode length, so they
+  start at zero; lines encode position and are read for change, so they may be truncated.**
+- **Time yourself on the pie chart.** "Which is the second-biggest daypart for Tampines Mall?" — pie
+  versus bar. Pie charts are not banned; you just need to know when angle-judging fails.
+- **The five-move fix (1.3) is the skill you are assessed on.** Bad chart → fix one thing at a time →
+  name the pillar each move serves. You should be able to do this on any chart afterwards.
+- **Use `fig, ax = plt.subplots()` from your very first chart.** Starting with `plt.plot()` leaves you
+  confused about which chart you are modifying for the rest of the course.
 - **`sharey=True` (2.2) is an ethics point, not a styling one.** Without it, small multiples mislead
   by accident.
-- **The histogram in 3.1 is the second-most-important cell.** The mean ticket lands in the *dip*
-  between two humps. It describes almost no real customer. This is the strongest argument for
-  distributions you will ever get to make with real-looking data.
+- **The histogram in 3.1.** The mean ticket lands in the *dip* between two humps, so it describes
+  almost no real customer. Strongest argument for distributions you will see.
 - **The identical box plots in 3.2 are a finding, not a dead end.** They rule out "Marina Bay's
-  customers spend less" in one chart. Teach that an absence of difference is a result.
-- **Part 4 must be reached with 25 minutes left.** The owner's slide is the payoff. If you are late,
-  cut Group Exercise 3 rather than Part 4.
+  customers spend less" in one chart. An absence of difference is a result.
+- **Part 4 is the payoff.** The owner's slide is what everything before it was for.
 - Deep dives (colour theory, accessibility, Gestalt, `pairplot`, `jointplot`, rcParams, interactive
-  libraries) live in `reference.md`. Point learners there; do not teach them live.
+  libraries) live in `reference.md` for self-study.
 
 ---
 
@@ -107,7 +104,7 @@ By the end of this session, you will be able to:
 - ✓ `pds` conda environment is set up
 
 **You will also need your Lesson 1.9 output.** The notebook loads `data/lesson19_decision.csv`. A copy
-is already in `data/`, so nobody is blocked, but learners who ran 1.9 should compare.
+is already in `data/` so you are not blocked, but if you ran 1.9 yourself, compare the two.
 
 Open `notebooks/data_visualization_lesson.ipynb` in VS Code and select the `pds` kernel.
 
@@ -127,11 +124,11 @@ Follow **Part 1** in the notebook.
 Length along a common baseline is the most accurately judged visual channel; angle and area are among
 the worst. That ranking is the whole reason bars beat pies.
 
-**1.2 Design — honest and not.** The truncated axis, then the pie-versus-bar race. See the
-instructor notes above; these two cells carry the section.
+**1.2 Design — honest and not.** The truncated axis, then the pie-versus-bar race. See "the cells
+worth slowing down on" above; these two cells carry the section.
 
 **1.3 Storytelling — fix a bad chart in five moves.** Start from `by_daypart.plot(kind="bar")` and
-have the class list what is wrong before you touch it. Then:
+list what is wrong before you touch it. Then:
 
 | Move | Pillar |
 |---|---|
@@ -186,10 +183,10 @@ hands back a matplotlib Axes you can still customise.
   the dip between them. It describes almost no real customer.
 - **3.2 Categories.** `boxplot` by outlet (near-identical — a finding by absence), `violinplot` by
   daypart (shows the two humps a box hides), `barplot` (which plots the **mean** and a 95% CI by
-  default — say this out loud, twice).
-- **3.3 Relationships.** `scatterplot`, then `regplot`. Use the regression line to make the sceptical
-  point: revenue *is* tickets × average ticket, so a tight fit here is arithmetic, not insight.
-  "Could this have come out any other way?" is the question to teach.
+  default — remember this one).
+- **3.3 Relationships.** `scatterplot`, then `regplot`. The regression line makes the sceptical point:
+  revenue *is* tickets × average ticket, so a tight fit here is arithmetic, not insight.
+  "Could this have come out any other way?" is the question to keep asking.
 - **3.4 Heatmaps and small multiples.** `heatmap(annot=True)` — colour alone cannot be read
   precisely, so print the numbers. Then `relplot(col=...)` for one panel per outlet.
 
@@ -221,10 +218,10 @@ and the rent share that makes it a decision (1 part). The message is the Figure 
 > reversed."
 
 > **End on this.** The slide does not say "close Marina Bay". Making the comparison unavoidable was
-> the analyst's job; the decision is the owner's. That line is the difference between an analyst and
-> someone with an agenda and a chart.
+> your job as the analyst; the decision is the owner's. That line is the difference between an analyst
+> and someone with an agenda and a chart.
 
-Close with the checklist cell and have everyone run it against their own Group Exercise output.
+Finish by running the checklist cell against your own Group Exercise output.
 
 ---
 
