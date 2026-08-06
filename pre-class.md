@@ -78,7 +78,7 @@ pie charts, and why nothing good has ever come from a 3D exploding donut.
 ✅ **Bars start at zero.**
 
 The reason matters more than the rule. A bar encodes its value as **length**. If the axis starts at
-150,000 instead of 0, the length is no longer proportional to the value, and the reader's eye is doing
+180,000 instead of 0, the length is no longer proportional to the value, and the reader's eye is doing
 arithmetic on a false premise. In class you will see the same four numbers drawn twice: truncated,
 Marina Bay looks like it earns about a tenth of Raffles Place. It earns **66%** of it.
 

@@ -5,6 +5,7 @@
 - [From Data to Viz — chart chooser with code](https://www.data-to-viz.com/)
 - [Financial Times Visual Vocabulary](https://github.com/Financial-Times/chart-doctor/blob/main/visual-vocabulary/poster.png)
 - [Data Storytelling Cheatsheet](https://www.datacamp.com/cheat-sheet/data-storytelling-and-communication-cheat-sheet)
+- [Color Theory in Logo Design](https://www.logodesign.net/blog/color-theory-in-logo-design/)
 
 ---
 
